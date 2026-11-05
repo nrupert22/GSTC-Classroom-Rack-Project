@@ -67,7 +67,6 @@
 | Purpose: UPS Monitoring, graceful shutdown, and serial aggregation
 | Location: Bottom
 
-
 | Model: 3x APC UPS Pro 1500
 | Purpose: Surge protection and battery backup
 | Location: Bottom 
