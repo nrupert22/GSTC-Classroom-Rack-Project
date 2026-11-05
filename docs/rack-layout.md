@@ -1,4 +1,4 @@
-                                          
+  ```                                        
    ┌───────────────────────────────────┐  
    │┌─────────────────────────────────┐│  
    ││┌┌──┐───────────────────────────┐││  
@@ -29,8 +29,10 @@
    ││                                 ││  
    │└─────────────────────────────────┘│  
    └───────────────────────────────────┘  
+   ```
    
 # Rack Devices (from top to bottom)
+```text
 | Model: Aruba 2930M Switch
 | Running: Aruba latest firmware
 | Purpose: Layer 2 forwarding and segmentation
@@ -92,4 +94,5 @@
 
 | Model: 3x APC UPS Pro 1500
 | Purpose: Surge protection and battery backup
-| Location: Bottom
+| Location: Bottom 
+```
