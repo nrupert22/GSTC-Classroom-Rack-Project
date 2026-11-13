@@ -38,7 +38,7 @@ Updates apt and docker containers.
 ```text
 #!/bin/bash
 apt-get update
-apt-get upgrade -y
+apt-get dist-upgrade -y
 docker compose down
 docker compose pull
 docker compose up -d
@@ -50,7 +50,7 @@ Updates via apt normally but changes directory to update docker containers.
 ```text
 #!/bin/bash
 apt-get update
-apt-get upgrade -y
+apt-get dist-upgrade -y
 cd /opt/nextcloud
 docker compose down
 docker compose pull
