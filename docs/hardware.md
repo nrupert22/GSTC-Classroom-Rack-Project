@@ -65,7 +65,7 @@
 | RAM Stick x GB:   
 | RAM Speed:  
 | ECC:  
-| Storage: 1 480GB SSD (Boot), 3 2TB HDD (Raid Z1), 4 4TB HDD (Raid Z2)
+| Storage: 1x 480GB SSD (Boot), 3x 2TB HDD (Raid Z1), 4x 4TB HDD (Raid Z2)
 | PCIE:  
 | Purpose/OS: Proxmox/Mass Datastorage
 
