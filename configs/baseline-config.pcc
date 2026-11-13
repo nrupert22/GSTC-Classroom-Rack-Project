@@ -1,0 +1,59 @@
+; JL324A Configuration Editor; Created on release #WC.16.11.0031
+; Ver #14:67.6f.f8.1d.9b.3f.bf.bb.ef.7c.59.fc.6b.fb.9f.fc.ff.ff.37.ef:44
+
+hostname "Aruba-2930M-24SR-PoEP"
+module 1 type jl324a
+flexible-module A type JL083A
+web-management ssl
+ip default-gateway 10.10.20.1
+snmp-server community "public" operator
+oobm
+   ip address dhcp-bootp
+   ipv6 enable
+   ipv6 address dhcp full
+   exit
+vlan 1
+   name "DEFAULT_VLAN"
+   untagged 1-24,A1-A4
+   ip address 10.10.20.20 255.255.255.0
+   ipv6 enable
+   ipv6 address dhcp full
+   exit
+vlan 10
+   name "VLAN10"
+   tagged 2
+   no ip address
+   exit
+vlan 20
+   name "VLAN_20"
+   tagged 2
+   no ip address
+   exit
+vlan 21
+   name "VLAN_21"
+   tagged 2
+   no ip address
+   exit
+vlan 22
+   name "VLAN_22"
+   tagged 2
+   no ip address
+   exit
+vlan 23
+   name "VLAN_23"
+   tagged 2
+   no ip address
+   exit
+vlan 99
+   name "VLAN99"
+   tagged 2
+   no ip address
+   exit
+no tftp server
+no autorun
+no dhcp config-file-update
+no dhcp image-file-update
+no dhcp tr69-acs-url
+password manager
+password operator
+

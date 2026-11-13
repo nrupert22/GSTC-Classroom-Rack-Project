@@ -1,0 +1,80 @@
+; JL324A Configuration Editor; Created on release #WC.16.11.0031
+; Ver #14:67.6f.f8.1d.9b.3f.bf.bb.ef.7c.59.fc.6b.fb.9f.fc.ff.ff.37.ef:44
+
+hostname "Aruba-2930M-24SR-PoEP"
+module 1 type jl324a
+flexible-module A type JL083A
+web-management ssl
+ip default-gateway 10.10.20.1
+interface 1
+   name "OPNSENSE ROUTER"
+   exit
+interface 2
+   name "WIFI AP"
+   exit
+interface 4
+   name "OPNSENSE IDRAC"
+   exit
+interface 5
+   name "INSTALLATION-02 IDRAC"
+   exit
+interface 6
+   name "INSTALLATION-03 IDRAC"
+   exit
+interface 7
+   name "INSTALLATION-04 IDRAC"
+   exit
+interface 9
+   name "INSTALLATION-02"
+   exit
+interface 10
+   name "INSTALLATION-03"
+   exit
+interface 11
+   name "INSTALLATION-04"
+   exit
+interface 18
+   name "SUPERINTENDANT DASHBOARD"
+   exit
+interface 19
+   name "CORTANA DASHBOARD"
+   exit
+interface 23
+   name "MILKMILK NUT-SERVER"
+   exit
+snmp-server community "public" operator
+oobm
+   ip address dhcp-bootp
+   ipv6 enable
+   ipv6 address dhcp full
+   exit
+vlan 1
+   name "Infrastructure"
+   untagged 1-24,A1-A4
+   ip address 10.10.20.20 255.255.255.192
+   ipv6 enable
+   ipv6 address dhcp full
+   exit
+vlan 2
+   name "Guest"
+   tagged 1-2
+   no ip address
+   exit
+vlan 3
+   name "VM/CT"
+   tagged 1-2,9-11,18-19
+   no ip address
+   exit
+vlan 4
+   name "Extra"
+   tagged 1-2
+   no ip address
+   exit
+no tftp server
+no autorun
+no dhcp config-file-update
+no dhcp image-file-update
+no dhcp tr69-acs-url
+password manager
+password operator
+
