@@ -39,7 +39,6 @@ Updates apt and docker containers.
 #!/bin/bash
 apt-get update
 apt-get dist-upgrade -y
-docker compose down
 docker compose pull
 docker compose up -d
 echo "Update complete, restart if needed!"
@@ -52,7 +51,6 @@ Updates via apt normally but changes directory to update docker containers.
 apt-get update
 apt-get dist-upgrade -y
 cd /opt/nextcloud
-docker compose down
 docker compose pull
 docker compose up -d
 cd ~
